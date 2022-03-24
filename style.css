@@ -185,7 +185,7 @@ body{
 .road .taxi .light_beam::after{
     content: '';
     position: absolute;
-    top: 5px;
+    bottom: 5px;
     left: 0;
     width: 150px;
     height: 16px;

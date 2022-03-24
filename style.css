@@ -22,6 +22,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transform-style: preserve-3d;
+    perspective: 800px;
 }
 
 .road::before{
@@ -51,6 +53,8 @@ body{
     background-color: #f4b603;
     border-radius: 10px;
     box-shadow: -10px 10px rgba(0,0,0,0.1);
+    transform-style: preserve-3d;
+    perspective: 800px;
 }
 
 .road .taxi::before{
@@ -153,4 +157,39 @@ body{
     transform-origin: right;
     transform: rotate(-15deg);
     box-shadow: 122px -22px #fdd206;
+}
+
+.road .taxi .light_beam{
+    position: absolute;
+    top: 5px;
+    right: -2px;
+    width: 10px;
+    height: 70px;
+    background: #0002;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+}
+
+.road .taxi .light_beam::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 150px;
+    height: 16px;
+    background: linear-gradient(90deg,#fff6,transparent);
+    transform-origin: left;
+    transform: perspective(500px) rotateY(-50deg);
+}
+
+.road .taxi .light_beam::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 150px;
+    height: 16px;
+    background: linear-gradient(90deg,#fff6,transparent);
+    transform-origin: left;
+    transform: perspective(500px) rotateY(-50deg);
 }

@@ -56,6 +56,15 @@ body{
     transform-style: preserve-3d;
     perspective: 800px;
     animation: taxi_animate 2s linear infinite;
+    z-index: 10;
+}
+
+.road .taxi:nth-child(2){
+    animation: taxi_animate 4s linear infinite;
+    animation-delay: -1s ;
+    left: initial;
+    right: 100px;
+    z-index: 9;
 }
 
 @keyframes taxi_animate{

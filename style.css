@@ -82,6 +82,7 @@ body{
     inset: 10px 5px;
     background: #fdd206;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .road .taxi span::before{
@@ -121,4 +122,35 @@ body{
     position: absolute;
     background: #fdd206;
     inset: 0 63px;
+}
+
+.road .taxi span i{
+    position: absolute;
+    inset: 0;
+}
+
+.road .taxi span i::before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    width: 40px;
+    height: 5px;
+    background: #fdd206;
+    transform-origin: right;
+    transform: rotate(15deg);
+    box-shadow: 122px 22px #fdd206;
+}
+
+.road .taxi span i::after{
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    left: 20px;
+    width: 40px;
+    height: 5px;
+    background: #fdd206;
+    transform-origin: right;
+    transform: rotate(-15deg);
+    box-shadow: 122px -22px #fdd206;
 }
